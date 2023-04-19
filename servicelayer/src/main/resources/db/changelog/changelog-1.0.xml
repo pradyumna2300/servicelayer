@@ -7,6 +7,11 @@
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
 
       ">
+    <changeSet id="1" author="pradyumna">
+        <addColumn tableName="user_concept">
+            <column name="gender" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
 
 
 </databaseChangeLog>
