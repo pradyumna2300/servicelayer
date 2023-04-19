@@ -27,6 +27,11 @@ public class UserController {
         return new ResponseEntity<String>(msg, HttpStatus.OK);
     }
 
+    @GetMapping("/userdata")
+    public List<User> getallUsers(){
+        return userService.getallUsers();
+    }
+
     @GetMapping("/user-data")
     public List<UserDTO> getAllUsers(){
         return userService.getAllUsers();

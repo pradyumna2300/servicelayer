@@ -4,7 +4,8 @@ import com.conceptext.servicelayer.entity.User;
 import com.conceptext.servicelayer.dao.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+//import org.modelmapper.ModelMapper;
+//import org.modelmapper.convention.MatchingStrategies;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,6 +20,11 @@ public class UserService {
     public String saveUser(User user){
         repo.save(user);
         return "user register";
+
+
+    }
+    public List<User> getallUsers(){
+        return repo.findAll();
 
 
     }
@@ -39,5 +45,6 @@ public class UserService {
         return userDTO;
 
     }
+
 
 }
